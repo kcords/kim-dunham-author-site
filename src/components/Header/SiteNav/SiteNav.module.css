@@ -1,0 +1,28 @@
+.nav-list {
+  margin: 0;
+  flex: 1.5 0;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1.75rem;
+  list-style-type: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+  place-items: flex-start center;
+}
+
+.nav-list-item {
+  color: var(--primary-color);
+}
+
+.nav-list-item:hover,
+.nav-list-item:active {
+  color: var(--light-color);
+  text-shadow: rgba(0, 0, 0, .5) 1px 0 10px;
+}
+
+.nav-list-item-active,
+.nav-list-item-active:hover,
+.nav-list-item-active:active {
+  color: var(--light-color);
+  text-shadow: var(--accent-color) 1px 0 25px;
+}

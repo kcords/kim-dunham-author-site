@@ -1,0 +1,16 @@
+.content-body {
+  margin: 0 200px;
+  padding: 50px 15px;
+  flex: 1 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  color: white;
+  backdrop-filter: blur(6px);
+  background-color: rgba(73, 166, 144, .15);
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px;
+  border-left: 2px rgba(255, 255, 255, .15) solid;
+  border-right: 2px rgba(40, 40, 40, .35) solid;
+}

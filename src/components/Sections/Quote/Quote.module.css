@@ -1,0 +1,33 @@
+.quote-container {
+  display: flex;
+  flex-flow: column;
+  padding: 50px;
+  width: 80%;
+  max-width: 600px;
+  background-color: rgba(253, 253, 252, .85);
+  border-radius: 5px;
+  border: .25px solid var(--accent-color);
+  box-shadow: 0 15px 59px -20px rgba(0, 0, 0, .35);
+}
+
+.quote-text {
+  margin: 0;
+  padding: 10px 0;
+  flex: 1 1;
+  font-size: 1.25rem;
+  text-align: justify;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-color);
+  text-shadow: rgba(0, 0, 0, .15) 3px 3px 10px;
+}
+
+.quote-citation {
+  font-size: 1.15rem;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  color: var(--accent-color);
+}

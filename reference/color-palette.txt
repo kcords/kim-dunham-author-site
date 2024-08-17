@@ -1,0 +1,6 @@
+Green: #65773C
+Dark turquoise: #49A690
+Light turquoise: #89D5CC
+Hazel: #827A51
+Brown: #35382A
+White: #FDFDFC
