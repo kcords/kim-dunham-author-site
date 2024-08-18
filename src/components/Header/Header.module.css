@@ -25,9 +25,7 @@
 }
 
 .menu-icon {
-  position: absolute;
   display: none;
-  background-color: var(--dark-color);
   font-size: 2.5rem;
   cursor: pointer;
   max-height: 40px;
