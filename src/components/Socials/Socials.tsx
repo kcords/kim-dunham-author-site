@@ -1,6 +1,7 @@
 import { SocialButton } from "./SocialButton";
 import { SocialIconSize } from "../../models.ts";
 import classes from "./Socials.module.css";
+import { compileClassList } from "../../utils.ts";
 import { socials } from "../../socials.ts";
 
 interface SocialsProps {
@@ -8,10 +9,15 @@ interface SocialsProps {
   showLabel?: boolean;
 }
 
-const getSocialsClassName = (size?: SocialIconSize) =>
-  size && size === SocialIconSize.Large
-    ? `${classes.socialsList} ${classes.socialsListLg}`
-    : classes.socialsList;
+const getSocialsClassName = (size?: SocialIconSize) => {
+  switch (size) {
+    case SocialIconSize.Large:
+      return compileClassList(classes.socialsList, classes.socialsListLg);
+    case SocialIconSize.Small:
+    default:
+      return classes.socialsList;
+  }
+};
 
 export const Socials = ({
   size = SocialIconSize.Small,
