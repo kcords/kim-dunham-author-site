@@ -1,3 +1,7 @@
+export const header = {
+  menuBtnLabel: '\u2630' // Unicode for "☰" (character entity &#9776;)
+}
+
 export const homeBio = {
   profileImgAlt: "Author Kimberly Dunham",
   heading: "About Kimberly",

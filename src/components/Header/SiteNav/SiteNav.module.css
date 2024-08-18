@@ -26,3 +26,15 @@
   color: var(--light-color);
   text-shadow: var(--accent-color) 1px 0 25px;
 }
+
+@media only screen and (max-width: 1024px) {
+  .nav-list {
+    position: relative;
+    padding: 60px 0;
+    flex-flow: column nowrap;
+    justify-content: center;
+    place-items: center;
+    gap: 2.5rem;
+    width: 100vw;
+  }
+}

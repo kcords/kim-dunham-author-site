@@ -1,5 +1,6 @@
 .socials-list {
   margin: 0;
+  padding: 0;
   flex: 0 1;
   display: flex;
   flex-flow: row nowrap;

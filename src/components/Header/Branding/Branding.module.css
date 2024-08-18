@@ -31,3 +31,9 @@
   font-size: 1.25rem;
   color: var(--light-color)
 }
+@media only screen and (max-width: 1200px) {
+  .branding-title {
+    font-size: 2rem;
+    padding-top: 0;
+  }
+}
