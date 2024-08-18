@@ -7,7 +7,7 @@ export const Branding = () => {
       <KDunhamLogo
         height="175"
         width="175"
-        alt="Open book with feather quill logo"
+        aria-label="Open book with feather quill logo"
       />
       <div className={classes.brandingTextContainer}>
         <h1 className={classes.brandingTitle}>Kimberly Dunham</h1>
