@@ -38,6 +38,7 @@
   font-size: .75rem;
   font-family: 'Raleway', sans-serif;
   font-weight: 600;
+  color: var(--light-color);
 }
 
 .socials-lg {
