@@ -31,3 +31,10 @@
   font-style: normal;
   color: var(--accent-color);
 }
+
+@media only screen and (max-width: 1024px) {
+  .quote-container {
+    max-width: 100vw;
+    border-radius: 0;
+  }
+}
