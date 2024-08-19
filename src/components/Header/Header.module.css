@@ -29,6 +29,7 @@
   font-size: 2.5rem;
   cursor: pointer;
   max-height: 40px;
+  color: var(--light-color)
 }
 
 .menu-icon:hover,
