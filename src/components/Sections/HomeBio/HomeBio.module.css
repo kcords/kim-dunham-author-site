@@ -45,3 +45,14 @@
   font-weight: 500;
   font-style: normal;
 }
+
+@media only screen and (max-width: 1024px) {
+  .bio-container {
+    flex-flow: column;
+    gap: 20px;
+  }
+
+  .bio-text-container p {
+    text-align: justify;
+  }
+}
