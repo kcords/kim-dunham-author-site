@@ -14,7 +14,7 @@ export const homeBio = {
   heading: "About Kimberly",
   aboutKimBody:
     "Kimberly is a YA fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter. Previously, she was a social media coordinator for a nonprofit women’s clinic. Today, she balances writing with homeschooling her daughter and working toward completing a degree in English language and literature. When she has a little downtime, which is never, she enjoys forest hikes, collecting houseplants, trying to decorate cakes, gardening, and playing guitar.",
-  moreLinkLabel: "Read more",
+  moreLinkLabel: "read more...",
 };
 
 export const newsletter = {

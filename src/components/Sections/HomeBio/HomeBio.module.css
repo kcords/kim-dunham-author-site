@@ -46,6 +46,19 @@
   font-style: normal;
 }
 
+.more-link-btn {
+  width: 100%;
+  text-align: right;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--text-color)
+}
+
+.more-link-btn:hover {
+  color: var(--secondary-color)
+}
+
 @media only screen and (max-width: 1024px) {
   .bio-container {
     flex-flow: column;
