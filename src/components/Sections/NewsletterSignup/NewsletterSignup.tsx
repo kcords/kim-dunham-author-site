@@ -5,6 +5,7 @@ import {
 } from "../../../constants";
 
 import { FormApi } from "final-form";
+import { FormData } from "../../../models.ts";
 import axios from "axios";
 import classes from "./NewsletterSignup.module.css";
 import isEmail from "validator/lib/isEmail";
@@ -12,8 +13,6 @@ import { newsletter } from "../../../strings";
 import { toast } from "react-toastify";
 
 const headers = { "Content-Type": "application/json" };
-
-type FormData = { [key: string]: string };
 
 export const NewsletterSignup = () => {
   const onSubmit = async ({ email }: FormData, form: FormApi) => {
