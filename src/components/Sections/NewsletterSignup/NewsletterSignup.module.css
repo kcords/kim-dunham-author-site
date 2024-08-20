@@ -23,6 +23,7 @@
   padding: 0 200px;
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
+  text-align: justify;
 }
 
 .input-container {
@@ -65,7 +66,7 @@
 }
 
 .signup-btn {
-  padding: 10px 15px;
+  padding: 0 15px;
   min-width: 60px;
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
