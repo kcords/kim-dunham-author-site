@@ -29,3 +29,10 @@ export const newsletter = {
     "There was an issue signing up. Check your address and try again.",
   signupInProgress: "One moment while we get you signed up.",
 };
+
+export const contactForm = {
+  submitSuccess: "Thank you for your message! We'll be in touch.",
+  submitError:
+    "There was an issue sending your message. Wait a moment and try again.",
+  submitInProgress: "One moment, your message is being sent.",
+};
