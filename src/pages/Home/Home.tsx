@@ -2,7 +2,7 @@ import { Awards } from "../../components/Sections/Awards";
 import { HomeBio } from "../../components/Sections/HomeBio";
 import { NewsletterSignup } from "../../components/Sections/NewsletterSignup/NewsletterSignup";
 import { Quote } from "../../components/Sections/Quote";
-import { SocialIconSize } from "../../models";
+import { SocialIconSize } from "../../consts";
 import { Socials } from "../../components/Socials";
 import classes from "./Home.module.css";
 

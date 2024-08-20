@@ -1,5 +1,5 @@
 import { SocialButton } from "./SocialButton";
-import { SocialIconSize } from "../../models.ts";
+import { SocialIconSize } from "../../consts.ts";
 import classes from "./Socials.module.css";
 import { compileClassList } from "../../utils.ts";
 import { socials } from "../../socials.ts";

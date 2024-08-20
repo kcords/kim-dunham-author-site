@@ -82,3 +82,15 @@
   color: var(--dark-color);
   cursor: not-allowed;
 }
+
+@media only screen and (max-width: 1024px) {
+  .subheading {
+    padding: 0 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .subheading {
+    padding: 0 10px;
+  }
+}

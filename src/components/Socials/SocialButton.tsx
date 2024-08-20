@@ -1,5 +1,5 @@
-import { SocialIcon } from "../../socials";
-import { SocialIconSize } from "../../models";
+import { SocialIcon } from "../../models";
+import { SocialIconSize } from "../../consts";
 import classes from "./Socials.module.css";
 
 interface SocialButtonProps {
