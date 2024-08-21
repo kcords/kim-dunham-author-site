@@ -31,6 +31,10 @@ export const newsletter = {
 };
 
 export const contactForm = {
+  nameLabel: "Name",
+  emailLabel: "Email address",
+  messageBodyLabel: "Message",
+  submitBtnLabel: "Submit",
   submitSuccess: "Thank you for your message! We'll be in touch.",
   submitError:
     "There was an issue sending your message. Wait a moment and try again.",
