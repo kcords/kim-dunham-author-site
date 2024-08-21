@@ -27,7 +27,9 @@ export const ContactForm = () => {
     import.meta.env;
 
   const onSubmit = async (formData: FormData, form: FormApi) => {
-    return; // TODO set up email templates, then enable code below
+    // TODO set up email templates, then remove the following two lines
+    toast.success(contactForm.submitSuccess); //* TO BE REMOVED
+    return; //* TO BE REMOVED
     const result = emailjs.send(
       VITE_EMAILJS_SERVICE_ID,
       VITE_TEMPLATE_ID,
