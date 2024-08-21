@@ -5,6 +5,7 @@ import {
   validateRequired,
 } from "../../../validators.ts";
 
+import { ContactFormTemplateField } from "../../../constants.ts";
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
 import classes from "./ContactForm.module.css";
@@ -29,9 +30,6 @@ export const ContactForm = () => {
     import.meta.env;
 
   const onSubmit = async (formData: FormData, form: FormApi) => {
-    // TODO set up email templates, then remove the following two lines
-    toast.success(contactForm.submitSuccess); //* TO BE REMOVED
-    return; //* TO BE REMOVED
     const result = emailjs.send(
       VITE_EMAILJS_SERVICE_ID,
       VITE_TEMPLATE_ID,
@@ -56,7 +54,7 @@ export const ContactForm = () => {
           return (
             <>
               <Field
-                name="name"
+                name={ContactFormTemplateField.Name}
                 type="text"
                 required
                 validate={validateRequired}
@@ -82,7 +80,7 @@ export const ContactForm = () => {
                 }}
               />
               <Field
-                name="email"
+                name={ContactFormTemplateField.Email}
                 type="email"
                 required
                 validate={composeValidators(validateRequired, validateEmail)}
@@ -107,7 +105,7 @@ export const ContactForm = () => {
                 }}
               />
               <Field
-                name="message"
+                name={ContactFormTemplateField.Message}
                 type="text"
                 required
                 validate={validateRequired}
