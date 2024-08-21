@@ -49,6 +49,10 @@
   color: var(--text-color);
 }
 
+.input-errored {
+  border-color: orangered;
+}
+
 .input:focus+.label,
 .input:not(:placeholder-shown)+.label {
   transform: translateY(-100%) scale(0.75);

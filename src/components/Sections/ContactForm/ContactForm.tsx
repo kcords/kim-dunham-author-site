@@ -13,8 +13,10 @@ import { contactForm } from "../../../strings.ts";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
+const isErrored = (meta: FieldMetaState<unknown>) => meta.touched && meta.error;
+
 const renderErrorMsg = (meta: FieldMetaState<unknown>) => {
-  if (!meta.touched || meta.valid) return null;
+  if (!isErrored(meta)) return null;
   return (
     <p className={classes.inputError} role="alert">
       {meta.error}
@@ -62,7 +64,10 @@ export const ContactForm = () => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
-                        className={classes.input}
+                        className={compileClassList(
+                          classes.input,
+                          isErrored(meta) && classes.inputErrored
+                        )}
                         placeholder=""
                         {...input}
                         autoCapitalize="words"
@@ -85,7 +90,10 @@ export const ContactForm = () => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
-                        className={classes.input}
+                        className={compileClassList(
+                          classes.input,
+                          isErrored(meta) && classes.inputErrored
+                        )}
                         placeholder=""
                         autoComplete="on"
                         {...input}
@@ -109,7 +117,8 @@ export const ContactForm = () => {
                       <textarea
                         className={compileClassList(
                           classes.input,
-                          classes.messageBodyInput
+                          classes.messageBodyInput,
+                          isErrored(meta) && classes.inputErrored
                         )}
                         placeholder=""
                         autoComplete="off"
