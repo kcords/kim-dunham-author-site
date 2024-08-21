@@ -40,3 +40,8 @@ export const contactForm = {
     "There was an issue sending your message. Wait a moment and try again.",
   submitInProgress: "One moment, your message is being sent.",
 };
+
+export const validationError = {
+  email: "Enter a valid email address",
+  required: "This is a required field",
+};
