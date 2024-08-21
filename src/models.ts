@@ -6,6 +6,8 @@ export interface RouteItem {
   seq: number;
 }
 
+export type FormData = { [key: string]: string };
+
 export interface SocialOption {
   label: string;
   url: string;

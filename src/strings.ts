@@ -14,7 +14,7 @@ export const homeBio = {
   heading: "About Kimberly",
   aboutKimBody:
     "Kimberly is a YA fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter. Previously, she was a social media coordinator for a nonprofit women’s clinic. Today, she balances writing with homeschooling her daughter and working toward completing a degree in English language and literature. When she has a little downtime, which is never, she enjoys forest hikes, collecting houseplants, trying to decorate cakes, gardening, and playing guitar.",
-  moreLinkLabel: "Read more",
+  moreLinkLabel: "read more...",
 };
 
 export const newsletter = {
@@ -28,4 +28,20 @@ export const newsletter = {
   signupError:
     "There was an issue signing up. Check your address and try again.",
   signupInProgress: "One moment while we get you signed up.",
+};
+
+export const contactForm = {
+  nameLabel: "Name",
+  emailLabel: "Email address",
+  messageBodyLabel: "Message",
+  submitBtnLabel: "Submit",
+  submitSuccess: "Thank you for your message! We'll be in touch.",
+  submitError:
+    "There was an issue sending your message. Wait a moment and try again.",
+  submitInProgress: "One moment, your message is being sent.",
+};
+
+export const validationError = {
+  email: "Enter a valid email address",
+  required: "This is a required field",
 };
