@@ -4,7 +4,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 25px;
   width: 80%;
   background-color: rgba(253, 253, 252, .85);
   border-radius: 5px;
@@ -28,8 +28,9 @@
 
 .input-container {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
   justify-content: flex-start;
+  align-items: flex-start;
   width: 80%;
 }
 
@@ -55,6 +56,15 @@
 
 .message-body-input {
   min-height: 150px
+}
+
+.input-error {
+  margin: 0;
+  padding: 2px 0;
+  font-size: .75rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: orangered;
 }
 
 .submit-btn {

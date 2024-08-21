@@ -1,4 +1,9 @@
-import { Field, Form } from "react-final-form";
+import { Field, FieldMetaState, Form } from "react-final-form";
+import {
+  composeValidators,
+  validateEmail,
+  validateRequired,
+} from "../../../validators.ts";
 
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
@@ -6,8 +11,16 @@ import classes from "./ContactForm.module.css";
 import { compileClassList } from "../../../utils.ts";
 import { contactForm } from "../../../strings.ts";
 import emailjs from "@emailjs/browser";
-import { isEmail } from "validator";
 import { toast } from "react-toastify";
+
+const renderErrorMsg = (meta: FieldMetaState<unknown>) => {
+  if (!meta.touched || meta.valid) return null;
+  return (
+    <p className={classes.inputError} role="alert">
+      {meta.error}
+    </p>
+  );
+};
 
 export const ContactForm = () => {
   const { VITE_EMAILJS_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } =
@@ -36,24 +49,27 @@ export const ContactForm = () => {
     <article className={classes.contactFormContainer}>
       <Form onSubmit={onSubmit}>
         {({ handleSubmit, submitting, pristine, dirty, valid }) => {
-          console.log({ submitting, pristine, dirty, valid });
           return (
             <>
               <Field
                 name="name"
                 type="text"
                 required
-                render={({ input }) => {
+                validate={validateRequired}
+                render={({ input, meta }) => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
                         className={classes.input}
                         placeholder=""
                         {...input}
+                        autoCapitalize="words"
+                        autoComplete="on"
                       />
                       <label htmlFor="email" className={classes.label}>
                         {contactForm.nameLabel}
                       </label>
+                      {renderErrorMsg(meta)}
                     </div>
                   );
                 }}
@@ -62,20 +78,20 @@ export const ContactForm = () => {
                 name="email"
                 type="email"
                 required
-                validate={(value) =>
-                  isEmail(value || "") ? undefined : "Invalid email address"
-                }
-                render={({ input }) => {
+                validate={composeValidators(validateRequired, validateEmail)}
+                render={({ input, meta }) => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
                         className={classes.input}
                         placeholder=""
+                        autoComplete="on"
                         {...input}
                       />
                       <label htmlFor="email" className={classes.label}>
                         {contactForm.emailLabel}
                       </label>
+                      {renderErrorMsg(meta)}
                     </div>
                   );
                 }}
@@ -84,7 +100,8 @@ export const ContactForm = () => {
                 name="message"
                 type="text"
                 required
-                render={({ input }) => {
+                validate={validateRequired}
+                render={({ input, meta }) => {
                   return (
                     <div className={classes.inputContainer}>
                       <textarea
@@ -93,11 +110,14 @@ export const ContactForm = () => {
                           classes.messageBodyInput
                         )}
                         placeholder=""
+                        autoComplete="off"
+                        autoCorrect="on"
                         {...input}
                       />
                       <label htmlFor="email" className={classes.label}>
                         {contactForm.messageBodyLabel}
                       </label>
+                      {renderErrorMsg(meta)}
                     </div>
                   );
                 }}
