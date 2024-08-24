@@ -23,7 +23,7 @@ export const Photo = ({
 }: PhotoProps) => {
   const className = compileClassList(
     classes.imgBase,
-    shape === Shape.Rounded ? classes.rounded : ""
+    shape === Shape.Rounded ? classes.rounded : classes.squared
   );
   return (
     <img

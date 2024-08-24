@@ -3,6 +3,10 @@
   flex: 0 1;
 }
 
+.squared {
+  border-radius: 3px;
+}
+
 .rounded {
   border-radius: 50%;
 }
