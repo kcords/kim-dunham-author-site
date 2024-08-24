@@ -8,6 +8,8 @@ import {
 import { ContactFormTemplateField } from "../../../constants.ts";
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
+import { Photo } from "../../Photo";
+import cLaptop from "../../../assets/images/c_laptop_square.jpg";
 import classes from "./ContactForm.module.css";
 import { compileClassList } from "../../../utils.ts";
 import { contactForm } from "../../../strings.ts";
@@ -48,11 +50,12 @@ export const ContactForm = () => {
   };
 
   return (
-    <article className={classes.contactFormContainer}>
+    <article className={classes.contentContainer}>
+      <Photo src={cLaptop} alt={""} height="300" width="300" />
       <Form onSubmit={onSubmit}>
         {({ handleSubmit, submitting, pristine, dirty, valid }) => {
           return (
-            <>
+            <div className={classes.contactFormContainer}>
               <Field
                 name={ContactFormTemplateField.Name}
                 type="text"
@@ -139,7 +142,7 @@ export const ContactForm = () => {
               >
                 {contactForm.submitBtnLabel}
               </button>
-            </>
+            </div>
           );
         }}
       </Form>
