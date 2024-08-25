@@ -76,4 +76,8 @@
     width: 100%;
     border-radius: 0;
   }
+
+  .bio-text-container {
+    padding: 0 30px;
+  }
 }
