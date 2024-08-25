@@ -46,10 +46,16 @@
     flex-flow: column;
     align-items: center;
     max-width: 100vw;
-    border-radius: 0;
   }
 
   .text {
     text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .section-container {
+    width: 100%;
+    border-radius: 0;
   }
 }

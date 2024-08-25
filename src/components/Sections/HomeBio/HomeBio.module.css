@@ -64,10 +64,16 @@
     flex-flow: column;
     gap: 20px;
     max-width: 100vw;
-    border-radius: 0;
   }
 
   .bio-text-container p {
     text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .bio-container {
+    width: 100%;
+    border-radius: 0;
   }
 }
