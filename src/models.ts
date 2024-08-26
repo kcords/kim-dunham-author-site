@@ -17,3 +17,23 @@ export interface SocialOption {
 export type SocialName = string;
 
 export type SocialIcon = FunctionComponent<SVGProps<SVGSVGElement>>;
+
+export interface FeedItemsResponse {
+  items: FeedItem[];
+}
+
+export interface FeedItem {
+  title: string;
+  pubDate: string;
+  link: string;
+  guid: string;
+  author: string;
+  thumbnail: string;
+  description: string;
+  content: string;
+  enclosure: {
+    link: string;
+    type: string; //"image/jpeg";
+  };
+  categories: string[];
+}
