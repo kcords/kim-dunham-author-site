@@ -34,12 +34,13 @@ export const newsletter = {
   subheading:
     "Subscribe to get full access to Kimberly's newsletter, which includes monthly writing updates, NaNoWriMo progress, publication news, contests she enters, and more.",
   emailLabel: "Email",
-  signupBtnLabel: "Sign\u00A0up",// Unicode for character entity &nbsp;
+  signupBtnLabel: "Sign\u00A0up", // Unicode for character entity &nbsp;
   signupSuccess:
     "Thanks for signing up! Check your inbox for a confirmation email.",
   signupError:
     "There was an issue signing up. Check your address and try again.",
   signupInProgress: "One moment while we get you signed up.",
+  feedLoadError: "There was an error loading the newsletter feed items.",
 };
 
 export const contactForm = {

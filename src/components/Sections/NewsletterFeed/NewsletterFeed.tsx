@@ -1,10 +1,19 @@
+import { NewsletterFeedItem } from "./NewsletterFeedItem";
+import classes from "./NewsletterFeed.module.css";
+import { newsletter } from "../../../strings";
+import { toast } from "react-toastify";
+import { useGetFeedItems } from "../../../hooks/useGetFeedItems";
+
 export const NewsletterFeed = () => {
+  const { feedItems } = useGetFeedItems({
+    onError: () => toast.error(newsletter.feedLoadError),
+  });
+
   return (
-    <>
-      {/*
-       * // TODO - implement feed items and retrieval
-       * Consider using substack-feed-api package at https://github.com/rohit1901/substack-feed-api
-       */}
-    </>
+    <div className={classes.feedContainer}>
+      {feedItems.map((feedItem) => (
+        <NewsletterFeedItem feedItem={feedItem} />
+      ))}
+    </div>
   );
 };
