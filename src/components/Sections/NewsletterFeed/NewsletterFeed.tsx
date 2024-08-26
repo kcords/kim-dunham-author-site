@@ -5,9 +5,11 @@ import { toast } from "react-toastify";
 import { useGetFeedItems } from "../../../hooks/useGetFeedItems";
 
 export const NewsletterFeed = () => {
-  const { feedItems } = useGetFeedItems({
+  const { isLoading, isError, feedItems } = useGetFeedItems({
     onError: () => toast.error(newsletter.feedLoadError),
   });
+
+  if (isLoading || isError || feedItems.length < 1) return null;
 
   return (
     <div className={classes.feedContainer}>
