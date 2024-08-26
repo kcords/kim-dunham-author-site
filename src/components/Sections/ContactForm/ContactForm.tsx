@@ -5,7 +5,7 @@ import {
   validateRequired,
 } from "../../../validators.ts";
 
-import { ContactFormTemplateField } from "../../../constants.ts";
+import { ContactFormTemplateField } from "../../../consts.ts";
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
 import { Photo } from "../../Photo";
@@ -28,16 +28,20 @@ const renderErrorMsg = (meta: FieldMetaState<unknown>) => {
 };
 
 export const ContactForm = () => {
-  const { VITE_EMAILJS_SERVICE_ID, VITE_TEMPLATE_ID, VITE_PUBLIC_KEY } =
-    import.meta.env;
+  const {
+    VITE_EMAILJS_SERVICE_ID,
+    VITE_EMAILJS_TEMPLATE_ID,
+    VITE_EMAILJS_PUBLIC_KEY,
+  } = import.meta.env;
 
   const onSubmit = async (formData: FormData, form: FormApi) => {
+    // TODO Move this to a netlify fn to hide api key in request
     const result = emailjs.send(
       VITE_EMAILJS_SERVICE_ID,
-      VITE_TEMPLATE_ID,
+      VITE_EMAILJS_TEMPLATE_ID,
       formData,
       {
-        publicKey: VITE_PUBLIC_KEY,
+        publicKey: VITE_EMAILJS_PUBLIC_KEY,
       }
     );
     toast.promise(result, {
