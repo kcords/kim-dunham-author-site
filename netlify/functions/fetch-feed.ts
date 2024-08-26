@@ -36,7 +36,6 @@ export default async (_req: Request, _context: Context) => {
       },
     });
   } catch (error) {
-    console.log(error);
     return new Response(JSON.stringify({ error: error.message }), {
       status: error.response.status,
       headers: {
