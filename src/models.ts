@@ -18,10 +18,6 @@ export type SocialName = string;
 
 export type SocialIcon = FunctionComponent<SVGProps<SVGSVGElement>>;
 
-export interface FeedItemsResponse {
-  items: FeedItem[];
-}
-
 export interface FeedItem {
   title: string;
   pubDate: string;

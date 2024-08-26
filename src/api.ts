@@ -1,4 +1,4 @@
-import { FeedItemsResponse } from "./models";
+import { FeedItem } from "./models";
 import axios from "axios";
 
 const { VITE_SUBSTACK_API = "", VITE_SUBSTACK_PROFILE_DOMAIN = "" } =
@@ -13,7 +13,7 @@ export const addNewSubscriber = (email: string) =>
     { headers: { "Content-Type": "application/json" } }
   );
 
-export const fetchFeedItems = async (): Promise<FeedItemsResponse> => {
+export const fetchFeedItems = async (): Promise<FeedItem[]> => {
   const { data } = await axios.get(FETCH_FEED_ENDPOINT);
   return data?.items || [];
 };
