@@ -1,22 +1,16 @@
 import { Field, Form } from "react-final-form";
-import {
-  SUBSTACK_API_URL,
-  SUBSTACK_PROFILE_URL as domain,
-} from "../../../constants";
 
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
-import axios from "axios";
+import { addNewSubscriber } from "../../../api.ts";
 import classes from "./NewsletterSignup.module.css";
 import isEmail from "validator/lib/isEmail";
 import { newsletter } from "../../../strings";
 import { toast } from "react-toastify";
 
-const headers = { "Content-Type": "application/json" };
-
 export const NewsletterSignup = () => {
   const onSubmit = async ({ email }: FormData, form: FormApi) => {
-    const result = axios.post(SUBSTACK_API_URL, { email, domain }, { headers });
+    const result = addNewSubscriber(email); //axios.post(SUBSTACK_API_URL, { email, domain }, { headers });
     toast.promise(result, {
       pending: newsletter.signupInProgress,
       success: newsletter.signupSuccess,
