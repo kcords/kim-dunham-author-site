@@ -13,7 +13,7 @@ export const Home = () => {
       <Awards />
       <Quote />
       <NewsletterSignup />
-      <Socials size={SocialIconSize.Large} showLabel />
+      <Socials size={SocialIconSize.Large} showLabels />
     </main>
   );
 };
