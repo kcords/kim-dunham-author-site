@@ -12,6 +12,7 @@
   color: var(--accent-color);
   font-size: 1.25rem;
   box-shadow: 0 15px 59px -20px rgba(0, 0, 0, .35);
+  animation: fadeIn .25s ease-in forwards;
 }
 
 .feed-item {
@@ -75,6 +76,15 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 600px) {
