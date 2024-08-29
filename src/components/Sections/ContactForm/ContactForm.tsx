@@ -60,6 +60,8 @@ export const ContactForm = () => {
         {({ handleSubmit, submitting, pristine, dirty, valid }) => {
           return (
             <div className={classes.contactFormContainer}>
+              <h3 className={classes.formSubheading}>I love connecting with my readers! Send me a question or comment and I’ll get back to you as soon as I can.
+              </h3>
               <Field
                 name={ContactFormTemplateField.Name}
                 type="text"

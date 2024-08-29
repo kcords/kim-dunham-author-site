@@ -52,6 +52,7 @@ export const contactForm = {
   submitError:
     "There was an issue sending your message. Wait a moment and try again.",
   submitInProgress: "One moment, your message is being sent.",
+  socialsSubheading: "You can also find me on social media."
 };
 
 export const validationError = {
