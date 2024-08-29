@@ -1,3 +1,4 @@
+import {LoadingSpinner} from '../../LoadingSpinner/'
 import { NewsletterFeedItem } from "./NewsletterFeedItem";
 import classes from "./NewsletterFeed.module.css";
 import { newsletter } from "../../../strings";
@@ -9,7 +10,9 @@ export const NewsletterFeed = () => {
     onError: () => toast.error(newsletter.feedLoadError),
   });
 
-  if (isLoading || isError || feedItems.length < 1) return null;
+  if (isLoading) return <LoadingSpinner />
+
+  if (isError || feedItems.length < 1) return null;
 
   return (
     <div className={classes.feedContainer}>
