@@ -10,17 +10,31 @@ export const About = () => {
   return (
     <main className={classes.contentBody}>
       <AboutContent heading={about.storiesHeading} text={about.storiesText}>
-        <Photo src={kDunhamCoast} alt={""} height="300" width="300" />
+        <Photo
+          src={kDunhamCoast}
+          alt={""}
+          height="300"
+          width="300"
+          alignment={Photo.Align.Left}
+        />
       </AboutContent>
-      <AboutContent
-        heading={about.forestsHeading}
-        text={about.forestsText}
-        alignInsert={AboutContent.AlignInsert.Right}
-      >
-        <Photo src={forestStump} alt={""} height="300" width="300" />
+      <AboutContent heading={about.forestsHeading} text={about.forestsText}>
+        <Photo
+          src={forestStump}
+          alt={""}
+          height="300"
+          width="300"
+          alignment={Photo.Align.Right}
+        />
       </AboutContent>
       <AboutContent heading={about.writingHeading} text={about.writingText}>
-        <Photo src={kodaWriting} alt={""} height="300" width="300" />
+        <Photo
+          src={kodaWriting}
+          alt={""}
+          height="300"
+          width="300"
+          alignment={Photo.Align.Left}
+        />
       </AboutContent>
     </main>
   );

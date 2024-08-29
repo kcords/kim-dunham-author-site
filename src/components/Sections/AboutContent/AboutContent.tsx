@@ -3,25 +3,13 @@ import classes from "./AboutContent.module.css";
 interface AboutContentProps {
   heading: string;
   text: string;
-  alignInsert?: AlignInsert;
   children?: React.ReactNode;
 }
 
-enum AlignInsert {
-  Left = "left",
-  Right = "right",
-}
-
-export const AboutContent = ({
-  heading,
-  text,
-  alignInsert,
-  children,
-}: AboutContentProps) => {
-  const showInsertRight = !!children && alignInsert === AlignInsert.Right;
+export const AboutContent = ({ heading, text, children }: AboutContentProps) => {
   return (
     <article className={classes.sectionContainer}>
-      {!showInsertRight ? children : null}
+      {children}
       <div className={classes.textContainer}>
         <h2 className={classes.heading}>{heading}</h2>
         {text.split("\n").map((p) => (
@@ -30,9 +18,6 @@ export const AboutContent = ({
           </p>
         ))}
       </div>
-      {showInsertRight ? children : null}
     </article>
   );
 };
-
-AboutContent.AlignInsert = AlignInsert;
