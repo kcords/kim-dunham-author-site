@@ -17,7 +17,7 @@ export const NewsletterFeed = () => {
   return (
     <div className={classes.feedContainer}>
       {feedItems.map((feedItem) => (
-        <NewsletterFeedItem feedItem={feedItem} />
+        <NewsletterFeedItem key={feedItem.guid} feedItem={feedItem} />
       ))}
     </div>
   );
