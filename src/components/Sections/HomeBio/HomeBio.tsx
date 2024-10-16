@@ -3,7 +3,7 @@ import { Photo } from "../../Photo";
 import { about } from "../../../routes.ts";
 import classes from "./HomeBio.module.css";
 import { homeBio } from "../../../strings";
-import kdunhamProfile from "../../../assets/images/kdunham_profile.jpg";
+import kdunhamProfile from "../../../assets/images/kdunham_profile.png";
 
 export const HomeBio = () => {
   return (
