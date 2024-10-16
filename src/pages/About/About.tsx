@@ -9,7 +9,7 @@ import kodaWriting from "../../assets/images/k_koda_square.jpg";
 export const About = () => {
   return (
     <main className={classes.contentBody}>
-      <AboutContent heading={about.storiesHeading} text={about.storiesText}>
+      <AboutContent heading={about.aboutHeading} text={about.aboutText}>
         <Photo
           src={kDunhamCoast}
           alt={""}

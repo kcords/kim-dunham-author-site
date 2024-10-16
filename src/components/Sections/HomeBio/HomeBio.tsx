@@ -15,7 +15,7 @@ export const HomeBio = () => {
       />
       <div className={classes.bioTextContainer}>
         <h2>{homeBio.heading}</h2>
-        <p>{homeBio.aboutKimBody}</p>
+        <p>{homeBio.welcomeMessage}</p>
         <NavLink to={about.path} className={classes.moreLinkBtn}>
           {homeBio.moreLinkLabel}
         </NavLink>
