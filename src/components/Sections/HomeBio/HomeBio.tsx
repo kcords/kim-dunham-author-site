@@ -13,6 +13,8 @@ export const HomeBio = () => {
         src={kdunhamProfile}
         alt={homeBio.profileImgAlt}
         shape={Photo.Shape.Rounded}
+        height="280"
+        width="280"
       />
       <div className={classes.bioTextContainer}>
         <h2>{homeBio.heading}</h2>

@@ -12,7 +12,7 @@ export const About = () => {
       <AboutContent heading={about.aboutHeading} text={about.aboutText}>
         <Photo
           src={kDunhamCoast}
-          alt={""} //TODO Add alt img text once image is finalized
+          alt={about.aboutImgAlt}
           height="300"
           width="300"
           alignment={Photo.Align.Left}
@@ -21,7 +21,7 @@ export const About = () => {
       <AboutContent heading={about.forestsHeading} text={about.forestsText}>
         <Photo
           src={forestStump}
-          alt={""} //TODO Add alt img text once image is finalized
+          alt={about.forestsImgAlt}
           height="300"
           width="300"
           alignment={Photo.Align.Right}
@@ -30,7 +30,7 @@ export const About = () => {
       <AboutContent heading={about.writingHeading} text={about.writingText}>
         <Photo
           src={kodaWriting}
-          alt={""} //TODO Add alt img text once image is finalized
+          alt={about.writingImgAlt}
           height="300"
           width="300"
           alignment={Photo.Align.Left}
