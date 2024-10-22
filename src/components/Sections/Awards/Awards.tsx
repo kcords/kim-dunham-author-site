@@ -1,9 +1,13 @@
+import { SectionWrapper } from "../../SectionWrapper";
 import auroraFinalist from "../../../assets/images/aurora_finalist_2024.png";
 import classes from "./Awards.module.css";
 
 export const Awards = () => {
   return (
-    <aside>
+    <SectionWrapper
+      backgroundColor={SectionWrapper.BackgroundColor.Transparent}
+      paddingCollapse
+    >
       <figure>
         <img
           className={classes.img}
@@ -13,6 +17,6 @@ export const Awards = () => {
           alt="Realm Makers Aurora Finalist 2024"
         />
       </figure>
-    </aside>
+    </SectionWrapper>
   );
 };
