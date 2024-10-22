@@ -2,6 +2,7 @@ import { Field, Form } from "react-final-form";
 
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
+import { SectionWrapper } from "../../SectionWrapper/index.ts";
 import { addNewSubscriber } from "../../../api.ts";
 import classes from "./NewsletterSignup.module.css";
 import isEmail from "validator/lib/isEmail";
@@ -10,7 +11,7 @@ import { toast } from "react-toastify";
 
 export const NewsletterSignup = () => {
   const onSubmit = async ({ email }: FormData, form: FormApi) => {
-    const result = addNewSubscriber(email); //axios.post(SUBSTACK_API_URL, { email, domain }, { headers });
+    const result = addNewSubscriber(email);
     toast.promise(result, {
       pending: newsletter.signupInProgress,
       success: newsletter.signupSuccess,
@@ -21,9 +22,16 @@ export const NewsletterSignup = () => {
   };
 
   return (
-    <aside className={classes.container}>
+    <SectionWrapper
+      direction={SectionWrapper.Direction.Column}
+      gap={SectionWrapper.Gap.None}
+      backgroundColor={SectionWrapper.BackgroundColor.Transparent}
+      paddingCollapse
+    >
+      {/* <aside className={classes.container}> */}
       <h2 className={classes.heading}>{newsletter.heading}</h2>
       <p className={classes.subheading}>{newsletter.subheading}</p>
+      <p className={classes.subheading}>{newsletter.leadMagnet}</p>
       <div className={classes.inputContainer}>
         <Form onSubmit={onSubmit}>
           {({ handleSubmit, submitting, pristine, dirty, valid }) => {
@@ -64,6 +72,6 @@ export const NewsletterSignup = () => {
           }}
         </Form>
       </div>
-    </aside>
+    </SectionWrapper>
   );
 };
