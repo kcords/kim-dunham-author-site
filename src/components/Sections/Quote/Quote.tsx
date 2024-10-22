@@ -1,8 +1,13 @@
+import { SectionWrapper } from "../../SectionWrapper";
 import classes from "./Quote.module.css";
 
 export const Quote = () => {
   return (
-    <aside className={classes.quoteContainer}>
+    <SectionWrapper
+      direction={SectionWrapper.Direction.Column}
+      maxWidth={SectionWrapper.MaxWidth.Px600}
+      gap={SectionWrapper.Gap.None}
+    >
       <blockquote className={classes.quoteText}>
         "Fantasy remains a human right: we make in our measure and in our
         derivative mode, because we are made: and not only made, but made in the
@@ -11,6 +16,6 @@ export const Quote = () => {
       <cite className={classes.quoteCitation}>
         — J.R.R. Tolkien, On Fairy-Stories
       </cite>
-    </aside>
+    </SectionWrapper>
   );
 };
