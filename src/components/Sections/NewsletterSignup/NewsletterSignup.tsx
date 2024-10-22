@@ -28,7 +28,6 @@ export const NewsletterSignup = () => {
       backgroundColor={SectionWrapper.BackgroundColor.Transparent}
       paddingCollapse
     >
-      {/* <aside className={classes.container}> */}
       <h2 className={classes.heading}>{newsletter.heading}</h2>
       <p className={classes.subheading}>{newsletter.subheading}</p>
       <p className={classes.subheading}>{newsletter.leadMagnet}</p>

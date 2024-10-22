@@ -51,7 +51,8 @@ body {
   display: flex;
   flex-flow: column nowrap;
   min-height: 100dvh;
-  max-width: 100dvw;
+  width: 100dvw;
+  max-width: 100%;
 }
 
 @media (prefers-color-scheme: light) {
