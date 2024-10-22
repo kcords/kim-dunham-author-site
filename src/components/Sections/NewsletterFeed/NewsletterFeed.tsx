@@ -1,5 +1,6 @@
 import {LoadingSpinner} from '../../LoadingSpinner/'
 import { NewsletterFeedItem } from "./NewsletterFeedItem";
+import { SectionWrapper } from "../../SectionWrapper";
 import classes from "./NewsletterFeed.module.css";
 import { newsletter } from "../../../strings";
 import { toast } from "react-toastify";
@@ -10,15 +11,15 @@ export const NewsletterFeed = () => {
     onError: () => toast.error(newsletter.feedLoadError),
   });
 
-  if (isLoading) return <LoadingSpinner />
+  if (isLoading) return <LoadingSpinner />;
 
   if (isError || feedItems.length < 1) return null;
 
   return (
-    <div className={classes.feedContainer}>
+    <SectionWrapper className={classes.feedContainer}>
       {feedItems.map((feedItem) => (
         <NewsletterFeedItem key={feedItem.guid} feedItem={feedItem} />
       ))}
-    </div>
+    </SectionWrapper>
   );
 };
