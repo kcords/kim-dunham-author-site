@@ -1,3 +1,4 @@
+import { SectionWrapper } from "../../SectionWrapper";
 import classes from "./AboutContent.module.css";
 
 interface AboutContentProps {
@@ -6,9 +7,13 @@ interface AboutContentProps {
   children?: React.ReactNode;
 }
 
-export const AboutContent = ({ heading, text, children }: AboutContentProps) => {
+export const AboutContent = ({
+  heading,
+  text,
+  children,
+}: AboutContentProps) => {
   return (
-    <article className={classes.sectionContainer}>
+    <SectionWrapper alignItems={SectionWrapper.AlignItems.Start}>
       {children}
       <div className={classes.textContainer}>
         <h2 className={classes.heading}>{heading}</h2>
@@ -18,6 +23,6 @@ export const AboutContent = ({ heading, text, children }: AboutContentProps) => 
           </p>
         ))}
       </div>
-    </article>
+    </SectionWrapper>
   );
 };
