@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Photo } from "../../Photo";
+import { SectionWrapper } from "../../SectionWrapper";
 import { about } from "../../../routes.ts";
 import classes from "./HomeBio.module.css";
 import { homeBio } from "../../../strings";
@@ -7,7 +8,7 @@ import kdunhamProfile from "../../../assets/images/kdunham_profile.png";
 
 export const HomeBio = () => {
   return (
-    <article className={classes.bioContainer}>
+    <SectionWrapper>
       <Photo
         src={kdunhamProfile}
         alt={homeBio.profileImgAlt}
@@ -20,6 +21,6 @@ export const HomeBio = () => {
           {homeBio.moreLinkLabel}
         </NavLink>
       </div>
-    </article>
+    </SectionWrapper>
   );
 };
