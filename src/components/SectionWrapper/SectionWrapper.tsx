@@ -8,6 +8,7 @@ interface SectionBaseProps {
   maxWidth?: MaxWidth;
   gap?: Gap;
   paddingCollapse?: boolean;
+  className?: string;
   children: React.ReactNode;
 }
 
@@ -43,6 +44,7 @@ export const SectionWrapper = ({
   maxWidth = MaxWidth.None,
   gap = Gap.Large,
   paddingCollapse = false,
+  className = "",
   children,
 }: SectionBaseProps) => {
   return (
@@ -54,7 +56,8 @@ export const SectionWrapper = ({
         classes[alignItems],
         maxWidth !== MaxWidth.None ? classes[maxWidth] : "",
         gap !== Gap.None ? classes[gap] : "",
-        paddingCollapse ? classes.paddingCollapse : ""
+        paddingCollapse ? classes.paddingCollapse : "",
+        className
       )}
     >
       {children}
