@@ -43,16 +43,15 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: stretch;
-  width: 100%;
-  max-width: 100vw;
-  min-width: 320px;
+  width: 100dvw;
   min-height: 100dvh;
 }
 
 #root {
   display: flex;
   flex-flow: column nowrap;
-  min-height: 100vh;
+  min-height: 100dvh;
+  max-width: 100dvw;
 }
 
 @media (prefers-color-scheme: light) {
