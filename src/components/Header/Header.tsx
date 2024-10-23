@@ -2,7 +2,6 @@ import { Branding } from "./Branding";
 import { SiteNav } from "./SiteNav";
 import { Socials } from "../Socials/";
 import classes from "./Header.module.css";
-import { header } from "../../strings";
 import { useRef } from "react";
 import { useUpdateMenuRefOnNav } from "../../hooks/useUpdateMenuRefOnNav";
 
