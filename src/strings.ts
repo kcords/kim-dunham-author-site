@@ -38,7 +38,7 @@ export const newsletter = {
   heading: "Newsletter signup",
   subheading:
     "Follow along with my author journey! Subscribe to my monthly newsletter for writing updates, publication news, and forest plant lore.",
-  leadMagnet: "As a thank you, you’ll receive a link to a free short story, ##TITLE_PLACEHOLDER##",
+  leadMagnet: "As a thank you, you’ll receive a free copy of my short story, Song of the Wolf.",
   emailLabel: "Email",
   signupBtnLabel: "Sign\u00A0up", // Unicode for character entity &nbsp;
   signupSuccess:
