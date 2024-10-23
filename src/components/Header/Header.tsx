@@ -18,9 +18,9 @@ export const Header = () => {
         id="menu-toggle"
         className={classes.menuToggle}
         ref={menuCheckboxRef}
+        aria-label="Toggle menu"
       />
       <label htmlFor="menu-toggle" className={classes.menuIcon} tabIndex={0}>
-        {header.menuBtnLabel}
       </label>
       <div className={classes.navContainer}>
         <SiteNav />

@@ -51,6 +51,14 @@
     right: 20px;
   }
 
+  .menu-icon::before {
+    content: '\2630'; /* Default content (Hamburger icon) */
+  }
+
+  .menu-toggle:checked ~ .menu-icon::before {
+    content: '\00D7'; /* Unicode for '×' (close symbol) */
+  }
+
   .nav-container {
     display: none;
   }
