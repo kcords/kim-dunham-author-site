@@ -10,7 +10,6 @@
 
 .heading {
   margin: 0;
-  padding-bottom: 5px;
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
@@ -20,10 +19,11 @@
 
 .subheading {
   margin: 0;
-  padding: 0 200px;
+  padding: 5px 150px;
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
   text-align: justify;
+  color: var(--light-color);
 }
 
 .input-container {
@@ -32,6 +32,7 @@
   flex-flow: row nowrap;
   margin: 20px auto;
   max-width: 400px;
+  color: var(--light-color);
 }
 
 .label {
@@ -93,5 +94,23 @@
 @media only screen and (max-width: 600px) {
   .subheading {
     padding: 0 10px;
+    max-width: 80dvw;
+  }
+
+  .input-container {
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 15px;
+    max-width: 70dvw;
+  }
+
+  .input, .signup-btn {
+    border-radius: 3px;
+  }
+
+  .signup-btn {
+    max-width: max-content;
+    height: 40px;
+    padding: 10px 30px;
   }
 }

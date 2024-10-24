@@ -1,12 +1,12 @@
 import { NewsletterFeed } from "../../components/Sections/NewsletterFeed";
 import { NewsletterSignup } from "../../components/Sections/NewsletterSignup/NewsletterSignup";
-import classes from "./Newsletter.module.css";
+import { PageWrapper } from "../../components/PageWrapper";
 
 export const Newsletter = () => {
   return (
-    <main className={classes.contentBody}>
+    <PageWrapper>
       <NewsletterSignup />
       <NewsletterFeed />
-    </main>
+    </PageWrapper>
   );
 };

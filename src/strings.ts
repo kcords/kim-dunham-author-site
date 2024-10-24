@@ -1,7 +1,3 @@
-export const header = {
-  menuBtnLabel: '\u2630' // Unicode for "☰" (character entity &#9776;)
-}
-
 export const navigation = {
   home: "Home",
   newsletter: "Newsletter",
@@ -11,28 +7,34 @@ export const navigation = {
 
 export const homeBio = {
   profileImgAlt: "Author Kimberly Dunham",
-  heading: "About Kimberly",
-  aboutKimBody:
-    "Kimberly is a YA fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter. Previously, she was a social media coordinator for a nonprofit women’s clinic. Today, she balances writing with homeschooling her daughter and working toward completing a degree in English language and literature. When she has a little downtime, which is never, she enjoys forest hikes, collecting houseplants, trying to decorate cakes, gardening, and playing guitar.",
-  moreLinkLabel: "read more...",
+  heading: "Welcome",
+  welcomeMessage:
+    "I’m so glad you’re here! I’m Kimberly Dunham, and I write YA dark forest fantasy stories featuring elemental magic, sentient forests, and sandwiches. I also enjoy a good pun (or a bad one). If you enjoy stories that mingle darkness with humor, beauty, and hope, you’ll enjoy my books.",
+  moreLinkLabel: "learn more...",
 };
 
 export const about = {
-  storiesHeading: "About My Stories",
-  storiesText:
-    "I write YA dark forest fantasy. My stories feature darkness because life can be hard. Most importantly, my stories feature flawed, ordinary people stumbling through the night on their way to something better.",
+  aboutHeading: "About Kimberly",
+  aboutText:
+    "Kimberly is a YA dark forest fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter and has turned into a coffee snob because of it. Today, she balances writing with homeschooling her daughter and working on an English language and literature degree. She has a deep affinity for popcorn, thrift stores, and all things Middle Earth. When she has a little downtime, which is never, she enjoys forest hikes, fawning over her houseplants, trying to decorate cakes, archery, camping, and playing guitar.",
+  aboutImgAlt: "Kimberly standing in front of an overlook of the Pacific Ocean",
   forestsHeading: "Why Forests?",
   forestsText:
-    "I grew up in Northern California—the part close to the Oregon border where snow-capped mountains march along the horizon and the temperature soars into triple digits all summer long. We had more pine forests than anything there, but on the coast, there were redwoods. I remember driving through Prairie Creek State Park and falling in love with the scenery: a million trickling waterfalls, a muddy road, and treetops disappearing into the fog.\nSome of my sweetest memories take place in the forest. That’s why I write stories featuring dark forests filled with magic, plant lore, puns, romance, and themes of hope and belonging.",
+    "Some of Kimberly’s favorite memories take place in the forest. She grew up in Northern California, where she camped in the pine forests and the redwoods with her mom and brother and attended various church camps throughout middle and high school.\nAfter high school, she worked on staff at a summer camp where she spent every afternoon playing guitar under the pine trees on the beach. Later, she spent a year living in a tiny mountain town. She worked in a nearly windowless office crowded with machine parts and would escape into the forest as soon as she got off work.\nToday, she lives with her husband and their spunky, not-so-tiny human in the Evergreen State. They have all kinds of forest adventures together and get rained on a lot.\nWriting stories with forests in them reminds Kimberly that there is beauty despite the pain and brokenness of our human lives—and that life itself is a gift and an unfolding story worth sticking around for.",
+  forestsImgAlt:
+    "Kimberly's husband and daughter standing on a stump in a mossy forest",
   writingHeading: "Writing Journey",
   writingText:
-    "In eighth grade, I wrote a story called The Kiltman, featuring a protagonist who was both a superhero and a public nuisance. Then, during my junior year of high school, I started writing a novel—a novel that I laid aside for the next 8 years. In August of 2016, I lost my first baby to a miscarriage. For the first time, I experienced grief mingled with hope—grief because I had lost something precious and hope because I knew my Maker walked alongside me in my grief. That fall, I participated in my first National Novel Writing Month (NaNoWriMo) competition. I dusted off my unfinished manuscript from high school, made some revisions, and got to work transforming it into a full-length novel.\nLater, I learned about plot and structure by attending a lecture by Jessica Brody, reading her excellent book, Save The Cat! Writes a Novel, and completing her Foundations of Fiction class through Writing Mastery Academy. I’ve attended various workshops and writer’s conferences including the AWP Writer’s Conference, Southwest Washington Writer’s Conference, and Write in the Harbor. At one of those conferences, I met Jeff Wheeler, author of the bestselling Kingfountain series. Jeff was kind enough to answer my questions and explain the importance of character motivations, which was a game-changer for my novel writing.\nIn the fall of 2023, I decided to go back to school. I am currently working toward a degree in English language and literature. One of my favorite classes has been children’s literature with Diana Ma, author of the Daughters of the Dynasty series and The Unbeatable Lily Hong. Diana’s class taught me the value of writing with empathy and understanding for kids. We live in a colorful, diverse world crafted that way intentionally by a creative and color-loving Creator. Although I will inevitably make mistakes, I aim to show off the beauty and artistry of the natural world and the people that inhabit it in all my stories.\nFinally, I entered my first novel, Betwixt, in the Aurora Contest by Realm Makers in late 2023. Betwixt advanced to round 2 of the fantasy category and then advanced to the final round. At the same time, I entered the League for Innovation Literary Contest by Seattle Colleges and received an honorable mention for my short story, The Sidewalk.",
+    "Kimberly started spinning stories in her head the minute she picked up the Little House series in third grade. She went on to write several short stories in middle and high school, including The Kiltman, which features a protagonist who was both a superhero and a public menace, and Princes and Frogs, a sweet allegorical fairytale about faith, love, and dragons masquerading as sheep.\nSeveral blogs and a creative writing hiatus later, Kimberly participated in her first-ever National Novel Writing Month (NaNoWriMo) competition. She learned about plot and structure from Jessica Brody's excellent book, Save The Cat! Writes a Novel and completed the Foundations of Fiction class through Writing Mastery Academy. She continued to draft novels and hone her craft, all the while falling in love with the art of storytelling.\nIn 2023, she entered her novel, Betwixt, in the Aurora Contest by Realm Makers and watched it advance to the final round for the fantasy category. Betwixt is currently under contract with Quill & Flame Publishing House and is set to release in 2026.",
+  writingImgAlt:
+    "Kimberly sitting on the floor typing her novel next to a black dog",
 };
 
 export const newsletter = {
   heading: "Newsletter signup",
   subheading:
-    "Subscribe to get full access to Kimberly's newsletter, which includes monthly writing updates, NaNoWriMo progress, publication news, contests she enters, and more.",
+    "Follow along with my author journey! Subscribe to my monthly newsletter for writing updates, publication news, and forest plant lore.",
+  leadMagnet: "As a thank you, you’ll receive a free copy of my short story, Song of the Wolf.",
   emailLabel: "Email",
   signupBtnLabel: "Sign\u00A0up", // Unicode for character entity &nbsp;
   signupSuccess:
@@ -44,6 +46,7 @@ export const newsletter = {
 };
 
 export const contactForm = {
+  heading: "If you have a question or comment, fill out the form below and I’ll get back to you as soon as I can.",
   nameLabel: "Name",
   emailLabel: "Email address",
   messageBodyLabel: "Message",
@@ -52,6 +55,7 @@ export const contactForm = {
   submitError:
     "There was an issue sending your message. Wait a moment and try again.",
   submitInProgress: "One moment, your message is being sent.",
+  socialsSubheading: "You can also find me on social media."
 };
 
 export const validationError = {

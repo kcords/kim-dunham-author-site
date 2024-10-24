@@ -9,6 +9,7 @@ import { ContactFormTemplateField } from "../../../consts.ts";
 import { FormApi } from "final-form";
 import { FormData } from "../../../models.ts";
 import { Photo } from "../../Photo";
+import { SectionWrapper } from "../../SectionWrapper/SectionWrapper.tsx";
 import cLaptop from "../../../assets/images/c_laptop_square.jpg";
 import classes from "./ContactForm.module.css";
 import { compileClassList } from "../../../utils.ts";
@@ -54,12 +55,13 @@ export const ContactForm = () => {
   };
 
   return (
-    <article className={classes.contentContainer}>
+    <SectionWrapper>
       <Photo src={cLaptop} alt={""} height="300" width="300" />
       <Form onSubmit={onSubmit}>
         {({ handleSubmit, submitting, pristine, dirty, valid }) => {
           return (
             <div className={classes.contactFormContainer}>
+              <h3 className={classes.formSubheading}>{contactForm.heading}</h3>
               <Field
                 name={ContactFormTemplateField.Name}
                 type="text"
@@ -150,6 +152,6 @@ export const ContactForm = () => {
           );
         }}
       </Form>
-    </article>
+    </SectionWrapper>
   );
 };

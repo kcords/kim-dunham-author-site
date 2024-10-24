@@ -1,27 +1,20 @@
+import { SectionWrapper } from "../../SectionWrapper";
 import classes from "./AboutContent.module.css";
 
 interface AboutContentProps {
   heading: string;
   text: string;
-  alignInsert?: AlignInsert;
   children?: React.ReactNode;
-}
-
-enum AlignInsert {
-  Left = "left",
-  Right = "right",
 }
 
 export const AboutContent = ({
   heading,
   text,
-  alignInsert,
   children,
 }: AboutContentProps) => {
-  const showInsertRight = !!children && alignInsert === AlignInsert.Right;
   return (
-    <article className={classes.sectionContainer}>
-      {!showInsertRight ? children : null}
+    <SectionWrapper alignItems={SectionWrapper.AlignItems.Start}>
+      {children}
       <div className={classes.textContainer}>
         <h2 className={classes.heading}>{heading}</h2>
         {text.split("\n").map((p) => (
@@ -30,9 +23,6 @@ export const AboutContent = ({
           </p>
         ))}
       </div>
-      {showInsertRight ? children : null}
-    </article>
+    </SectionWrapper>
   );
 };
-
-AboutContent.AlignInsert = AlignInsert;

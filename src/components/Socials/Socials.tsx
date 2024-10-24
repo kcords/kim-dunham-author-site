@@ -6,7 +6,7 @@ import { socials } from "../../socials.ts";
 
 interface SocialsProps {
   size?: SocialIconSize;
-  showLabel?: boolean;
+  showLabels?: boolean;
 }
 
 const getSocialsClassName = (size?: SocialIconSize) => {
@@ -19,10 +19,7 @@ const getSocialsClassName = (size?: SocialIconSize) => {
   }
 };
 
-export const Socials = ({
-  size = SocialIconSize.Small,
-  showLabel,
-}: SocialsProps) => {
+export const Socials = ({ size = SocialIconSize.Small, showLabels }: SocialsProps) => {
   return (
     <ul className={getSocialsClassName(size)}>
       {Object.values(socials).map((social) => (
@@ -32,7 +29,7 @@ export const Socials = ({
           url={social.url}
           icon={social.icon}
           size={size}
-          showLabel={showLabel}
+          showLabel={showLabels}
         />
       ))}
     </ul>

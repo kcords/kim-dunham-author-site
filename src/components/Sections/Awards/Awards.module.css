@@ -1,3 +1,9 @@
 .img {
-  filter: drop-shadow(0 15px 59px rgba(0, 0, 0, .35));
+  filter: drop-shadow(0 15px 10px rgba(0, 0, 0, .35));
+  }
+
+@media only screen and (max-width: 1024px) {
+  .img {
+    filter: drop-shadow(0 15px 15px rgba(255, 255, 255, .05));
+  }
 }
