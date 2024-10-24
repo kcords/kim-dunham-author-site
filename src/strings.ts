@@ -1,5 +1,6 @@
 export const navigation = {
   home: "Home",
+  books: "Books",
   newsletter: "Newsletter",
   about: "About",
   contact: "Contact",
