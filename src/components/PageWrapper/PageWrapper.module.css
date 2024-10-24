@@ -27,13 +27,14 @@
 
 @media only screen and (max-width: 600px) {
   .content-body {
+    align-items: center;
     margin: 0;
-      padding: 0;
+    padding: 0;
     padding-bottom: 20px;
     width: 100dvw;
-    align-items: flex-start;
     background-color: rgba(73, 166, 144, 0);
     backdrop-filter: none;
+    border: none;
   }
 
   .no-section-spacing {
