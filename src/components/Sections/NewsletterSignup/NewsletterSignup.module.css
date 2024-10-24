@@ -10,7 +10,6 @@
 
 .heading {
   margin: 0;
-  padding-bottom: 5px;
   font-family: "Raleway", sans-serif;
   font-size: 1.75rem;
   font-weight: 500;
@@ -20,7 +19,7 @@
 
 .subheading {
   margin: 0;
-  padding: 0 200px;
+  padding: 5px 150px;
   font-size: 1rem;
   font-family: 'Raleway', sans-serif;
   text-align: justify;
@@ -95,6 +94,7 @@
 @media only screen and (max-width: 600px) {
   .subheading {
     padding: 0 10px;
+    max-width: 80dvw;
   }
 
   .input-container {
