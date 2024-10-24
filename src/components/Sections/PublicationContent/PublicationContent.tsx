@@ -1,7 +1,6 @@
 import { Photo } from "../../Photo";
 import { PublicationDetails } from "../../../models";
 import { SectionWrapper } from "../../SectionWrapper";
-import betwixtBookImage from "@/assets/images/betwixt_placeholder.png";
 import classes from "./PublicationContent.module.css";
 import { getReleaseTextByDate } from "../../../utils";
 
