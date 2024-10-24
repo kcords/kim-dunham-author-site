@@ -7,7 +7,6 @@ import { socials } from "../../socials.ts";
 interface SocialsProps {
   size?: SocialIconSize;
   showLabels?: boolean;
-  headingText?: string
 }
 
 const getSocialsClassName = (size?: SocialIconSize) => {
@@ -20,27 +19,19 @@ const getSocialsClassName = (size?: SocialIconSize) => {
   }
 };
 
-export const Socials = ({
-  size = SocialIconSize.Small,
-  showLabels,
-  headingText
-}: SocialsProps) => {
-  const showHeadingText = !!headingText
+export const Socials = ({ size = SocialIconSize.Small, showLabels }: SocialsProps) => {
   return (
-    <>
-      {showHeadingText && <h3 className={classes.socialsSubheading}>{headingText}</h3>}
-      <ul className={getSocialsClassName(size)}>
-        {Object.values(socials).map((social) => (
-          <SocialButton
-            key={social.url}
-            label={social.label}
-            url={social.url}
-            icon={social.icon}
-            size={size}
-            showLabel={showLabels}
-          />
-        ))}
-      </ul>
-    </>
+    <ul className={getSocialsClassName(size)}>
+      {Object.values(socials).map((social) => (
+        <SocialButton
+          key={social.url}
+          label={social.label}
+          url={social.url}
+          icon={social.icon}
+          size={size}
+          showLabel={showLabels}
+        />
+      ))}
+    </ul>
   );
 };

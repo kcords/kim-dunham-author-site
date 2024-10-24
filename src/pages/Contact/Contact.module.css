@@ -1,0 +1,10 @@
+
+.socials-subheading {
+  margin: 0;
+  font-size: 1.25rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  color: var(--light-color);
+  text-align: justify;
+}
+
