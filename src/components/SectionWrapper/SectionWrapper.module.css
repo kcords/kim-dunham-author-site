@@ -60,10 +60,10 @@
 
 @media only screen and (max-width: 600px) {
   .section-container {
+    box-sizing: border-box;
     align-items: center;
     margin: 0;
-    width: unset;
-    max-width: 100dvw;
+    width: 100%;
     overflow-x: hidden;
     border-radius: 0;
   }
