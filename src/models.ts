@@ -3,7 +3,6 @@ import { FunctionComponent, SVGProps } from "react";
 export interface RouteItem {
   label: string;
   path: string;
-  seq: number;
 }
 
 export type FormData = { [key: string]: string };
@@ -32,4 +31,20 @@ export interface FeedItem {
     type: string; //"image/jpeg";
   };
   categories: string[];
+}
+
+export type Publications = Record<"books" | "shortStories", PublicationDetails>;
+
+export interface PublicationDetails {
+  title: string;
+  detail: string;
+  release: string;
+  publisher: string;
+  logline: string;
+  image?: Image;
+}
+
+export interface Image {
+  path: string;
+  description: string;
 }
