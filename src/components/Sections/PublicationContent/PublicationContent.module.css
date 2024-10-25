@@ -1,3 +1,7 @@
+.details-container {
+  flex: 1;
+}
+
 .title {
   margin: 0;
   margin-bottom: 5px;

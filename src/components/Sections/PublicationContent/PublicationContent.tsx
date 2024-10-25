@@ -16,7 +16,7 @@ export const PublicationContent = ({
       {image ? (
         <Photo src={image.path} alt={image.description} width={"300px"} />
       ) : null}
-      <div>
+      <div className={classes.detailsContainer}>
         <h2 className={classes.title}>{title}</h2>
         {detail ? <h3 className={classes.detail}>{detail}</h3> : null}
         <p className={classes.releaseBanner}>{getReleaseTextByDate(release)}</p>
