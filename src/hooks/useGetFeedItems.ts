@@ -10,7 +10,7 @@ export const useGetFeedItems = () => {
   const {
     isLoading,
     isError,
-    data: feedItems,
+    data: feedItems = [],
   } = useQuery({
     queryKey: ["get-newsletter-feed-items"],
     queryFn: fetchFeedItems,
