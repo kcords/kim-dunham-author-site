@@ -1,19 +1,51 @@
 .footer {
   margin-top: .25px;
+  padding: 20px 40px;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 20px 200px;
   max-width: 100%;
   max-height: 160px;
+  font-size: 1.75 rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 500;
   background-color: var(--dark-color);
+  color: var(--text-color);
   border-top: 1px rgba(255, 255, 255, .15) solid;
-  color: var(--light-color);
+}
+
+.attribution-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: right;
+  font-size: .8rem;
+  font-weight: 300;
+}
+
+.attribution-item a {
+  color: var(--text-color)
+}
+
+.attribution-item a:hover {
+  color: var(--primary-color)
 }
 
 @media only screen and (max-width: 1024px) {
   .footer {
     padding: 20px 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .attribution-list {
+    text-align: center;
   }
 }
