@@ -14,7 +14,7 @@ export const useGetFeedItems = () => {
   } = useQuery({
     queryKey: ["get-newsletter-feed-items"],
     queryFn: fetchFeedItems,
-    initialData: [],
+    // initialData: [],
     staleTime: TIME_TO_STALE,
     gcTime: TIME_TO_GARBAGE_COLLECT,
   });
