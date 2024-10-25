@@ -18,7 +18,11 @@
       "detail": "Featured in the Seasons of Romantasy anthology",
       "release": "Coming June 2025",
       "publisher": "Published by Quill & Flame Publishing House",
-      "logline": ""
+      "logline": "",
+      "image": {
+        "path": "public/assets/images/seasons_of_romantacy_placeholder.png",
+        "description": ""
+      }
     }
   ]
 }
