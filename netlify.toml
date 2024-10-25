@@ -6,6 +6,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/books"
+  to = "/"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "/about"
   to = "/"
   status = 200
