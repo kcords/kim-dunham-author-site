@@ -65,10 +65,6 @@
     content: '\00D7'; /* Unicode for '×' (close symbol) */
   }
 
-  .nav-container {
-    display: none;
-  }
-
   .menu-toggle:checked~.nav-container {
     display: flex;
     align-items: center;
@@ -100,5 +96,17 @@
     padding: 10px 0;
     width: 100%;
     max-width: 100dvw;
+  }
+
+  .nav-container {
+    opacity: 0;
+    display: flex;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out, opacity 0.25s ease-in-out;
+  }
+
+  .menu-toggle:checked~.nav-container {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
