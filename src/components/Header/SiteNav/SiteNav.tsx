@@ -1,30 +1,23 @@
-import * as routes from "../../../routes.ts";
-
 import { NavLink } from "react-router-dom";
-import { RouteItem } from "../../../models.ts";
 import classes from "./SiteNav.module.css";
-
-const orderNavBySeq = (navA: RouteItem, navB: RouteItem) =>
-  navA.seq > navB.seq ? 1 : -1;
+import { routes } from "../../../routes.ts";
 
 export const SiteNav = () => {
   return (
     <nav>
       <ul className={classes.navList}>
-        {Object.values(routes)
-          .sort(orderNavBySeq)
-          .map((route) => (
-            <li key={route.label}>
-              <NavLink
-                to={route.path}
-                className={({ isActive }) =>
-                  isActive ? classes.navListItemActive : classes.navListItem
-                }
-              >
-                {route.label}
-              </NavLink>
-            </li>
-          ))}
+        {routes.map((route) => (
+          <li key={route.label}>
+            <NavLink
+              to={route.path}
+              className={({ isActive }) =>
+                isActive ? classes.navListItemActive : classes.navListItem
+              }
+            >
+              {route.label}
+            </NavLink>
+          </li>
+        ))}
       </ul>
     </nav>
   );

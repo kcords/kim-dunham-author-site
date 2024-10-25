@@ -1,38 +1,22 @@
-import { FeedItem } from "../models";
+import { HOUR_IN_MILLISECONDS, MINUTE_IN_MILLISECONDS } from "../consts";
+
 import { fetchFeedItems } from "../api";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 
-interface UseGetFeedItemsProps {
-  onSuccess?: () => void;
-  onError?: (error: Error) => void;
-}
+const TIME_TO_STALE = 20 * MINUTE_IN_MILLISECONDS;
+const TIME_TO_GARBAGE_COLLECT = 1 * HOUR_IN_MILLISECONDS;
 
-export const useGetFeedItems = ({
-  onSuccess,
-  onError,
-}: UseGetFeedItemsProps = {}) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [isError, setIsError] = useState(false);
-  const [feedItems, setFeedItems] = useState<FeedItem[]>([]);
+export const useGetFeedItems = () => {
+  const {
+    isLoading,
+    isError,
+    data: feedItems,
+  } = useQuery({
+    queryKey: ["get-newsletter-feed-items"],
+    queryFn: fetchFeedItems,
+    staleTime: TIME_TO_STALE,
+    gcTime: TIME_TO_GARBAGE_COLLECT,
+  });
 
-  useEffect(() => {
-    const beginFetchFeedItems = async () => {
-      try {
-        setIsError(false);
-        setIsLoading(true);
-        const feedItemsResponse = await fetchFeedItems();
-        setFeedItems(feedItemsResponse || []);
-        onSuccess?.();
-      } catch (error) {
-        setIsError(true);
-        onError?.(error as Error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    if (feedItems.length < 1) beginFetchFeedItems();
-  }, [feedItems, onError, onSuccess]);
   return { isLoading, isError, feedItems };
 };

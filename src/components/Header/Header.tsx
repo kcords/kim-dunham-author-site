@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { useUpdateMenuRefOnNav } from "../../hooks/useUpdateMenuRefOnNav";
 
 export const Header = () => {
+  //used to uncheck checkbox state on navigation
   const menuCheckboxRef = useRef(null);
   useUpdateMenuRefOnNav(menuCheckboxRef);
 

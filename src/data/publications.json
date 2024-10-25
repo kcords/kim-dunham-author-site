@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "title": "Betwixt",
+      "detail": "",
+      "release": "Coming 2026",
+      "publisher": "Published by Quill & Flame Publishing House",
+      "logline": "Devastated by the sudden death of her mother, a socially anxious teen returns to her birthplace of Ketchikan, Alaska, where she must uncover the truth about her newfound magical abilities tied to the forest and her mother's veiled past before the powers governing the forest destroy her.",
+      "image": {
+        "path": "/assets/images/betwixt_placeholder.png",
+        "description": ""
+      }
+    }
+  ],
+  "shortStories": [
+    {
+      "title": "Blackthorn and Holly",
+      "detail": "Featured in the Seasons of Romantasy anthology",
+      "release": "Coming June 2025",
+      "publisher": "Published by Quill & Flame Publishing House",
+      "logline": ""
+    }
+  ]
+}

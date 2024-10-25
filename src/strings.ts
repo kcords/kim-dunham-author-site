@@ -1,5 +1,6 @@
 export const navigation = {
   home: "Home",
+  books: "Books",
   newsletter: "Newsletter",
   about: "About",
   contact: "Contact",
@@ -62,3 +63,10 @@ export const validationError = {
   email: "Enter a valid email address",
   required: "This is a required field",
 };
+
+export const footer = {
+  copyright: "\u00A92024 Kimberly Dunham",
+  siteDevAttribution: "Developed by Kyle Cordell",
+  iconsAttribution: "Icons by icons8",
+  spinnerAttribution: 'Loaders by SVG Backgrounds'
+}
