@@ -3543,8 +3543,8 @@ packages:
   micro-memoize@4.1.2:
     resolution: {integrity: sha512-+HzcV2H+rbSJzApgkj0NdTakkC+bnyeiUxgT6/m7mjcz1CmM22KYFKp+EVj1sWe4UYcnriJr5uqHQD/gMHLD+g==}
 
-  micromatch@4.0.7:
-    resolution: {integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==}
+  micromatch@4.0.8:
+    resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
 
   mime-db@1.52.0:
@@ -5888,7 +5888,7 @@ snapshots:
     dependencies:
       execa: 6.1.0
       map-obj: 5.0.2
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       moize: 6.1.6
       path-exists: 5.0.0
 
@@ -6154,7 +6154,7 @@ snapshots:
   '@parcel/watcher-wasm@2.4.1':
     dependencies:
       is-glob: 4.0.3
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   '@parcel/watcher-win32-arm64@2.4.1':
     optional: true
@@ -6169,7 +6169,7 @@ snapshots:
     dependencies:
       detect-libc: 1.0.3
       is-glob: 4.0.3
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       node-addon-api: 7.1.1
     optionalDependencies:
       '@parcel/watcher-android-arm64': 2.4.1
@@ -6586,7 +6586,7 @@ snapshots:
       estree-walker: 2.0.2
       glob: 7.2.3
       graceful-fs: 4.2.11
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       node-gyp-build: 4.8.1
       resolve-from: 5.0.0
     transitivePeerDependencies:
@@ -7265,7 +7265,7 @@ snapshots:
       cp-file: 9.1.0
       globby: 13.2.2
       junk: 4.0.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
       nested-error-stacks: 2.1.1
       p-filter: 3.0.0
       p-map: 5.5.0
@@ -7832,7 +7832,7 @@ snapshots:
       '@nodelib/fs.walk': 1.2.8
       glob-parent: 5.1.2
       merge2: 1.4.1
-      micromatch: 4.0.7
+      micromatch: 4.0.8
 
   fast-json-stable-stringify@2.1.0: {}
 
@@ -8296,7 +8296,7 @@ snapshots:
       http-proxy: 1.18.1(debug@4.3.6)
       is-glob: 4.0.3
       is-plain-obj: 3.0.0
-      micromatch: 4.0.7
+      micromatch: 4.0.8
     transitivePeerDependencies:
       - debug
 
@@ -8834,7 +8834,7 @@ snapshots:
 
   micro-memoize@4.1.2: {}
 
-  micromatch@4.0.7:
+  micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
