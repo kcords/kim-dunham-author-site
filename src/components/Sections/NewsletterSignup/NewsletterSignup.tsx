@@ -46,6 +46,7 @@ export const NewsletterSignup = () => {
                     return (
                       <>
                         <input
+                          id="email"
                           className={classes.input}
                           type="email"
                           placeholder=""

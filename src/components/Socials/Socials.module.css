@@ -13,6 +13,12 @@
   gap: 2rem;
 }
 
+.list-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
 .socials-btn {
   display: flex;
   flex-flow: column nowrap;

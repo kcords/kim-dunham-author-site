@@ -35,6 +35,8 @@
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-style: normal;
+  text-align: center;
+  white-space: nowrap;
   color: var(--light-color);
   background-color: var(--secondary-color);
   border-radius: 20px;
