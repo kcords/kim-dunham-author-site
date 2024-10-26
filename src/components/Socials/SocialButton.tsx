@@ -29,17 +29,19 @@ export const SocialButton = ({
 }: SocialButtonProps) => {
   const sizeInPx = getIconSize(size);
   return (
-    <button
-      className={classes.socialsBtn}
-      onClick={() => window.open(url, "_blank")}
-    >
-      <Icon
-        className={classes.socialsIcon}
-        aria-label={label}
-        height={sizeInPx}
-        width={sizeInPx}
-      />
-      {showLabel && <span className={classes.socialsLabel}>{label}</span>}
-    </button>
+    <li className={classes.listItem}>
+      <button
+        className={classes.socialsBtn}
+        onClick={() => window.open(url, "_blank")}
+      >
+        <Icon
+          className={classes.socialsIcon}
+          aria-label={label}
+          height={sizeInPx}
+          width={sizeInPx}
+        />
+        {showLabel && <span className={classes.socialsLabel}>{label}</span>}
+      </button>
+    </li>
   );
 };

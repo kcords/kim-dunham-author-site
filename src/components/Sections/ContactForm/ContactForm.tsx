@@ -61,7 +61,7 @@ export const ContactForm = () => {
         {({ handleSubmit, submitting, pristine, dirty, valid }) => {
           return (
             <div className={classes.contactFormContainer}>
-              <h3 className={classes.formSubheading}>{contactForm.heading}</h3>
+              <h2 className={classes.formSubheading}>{contactForm.heading}</h2>
               <Field
                 name={ContactFormTemplateField.Name}
                 type="text"
@@ -71,6 +71,7 @@ export const ContactForm = () => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
+                        id="name"
                         className={compileClassList(
                           classes.input,
                           isErrored(meta) && classes.inputErrored
@@ -97,6 +98,7 @@ export const ContactForm = () => {
                   return (
                     <div className={classes.inputContainer}>
                       <input
+                        id="email"
                         className={compileClassList(
                           classes.input,
                           isErrored(meta) && classes.inputErrored
@@ -122,6 +124,7 @@ export const ContactForm = () => {
                   return (
                     <div className={classes.inputContainer}>
                       <textarea
+                        id="message"
                         className={compileClassList(
                           classes.input,
                           classes.messageBodyInput,
@@ -132,7 +135,7 @@ export const ContactForm = () => {
                         autoCorrect="on"
                         {...input}
                       />
-                      <label htmlFor="email" className={classes.label}>
+                      <label htmlFor="message" className={classes.label}>
                         {contactForm.messageBodyLabel}
                       </label>
                       {renderErrorMsg(meta)}
