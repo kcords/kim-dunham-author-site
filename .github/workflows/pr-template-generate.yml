@@ -1,0 +1,56 @@
+name: "PR Title and Description Setup"
+
+on:
+  pull_request:
+    types: [opened, edited]
+
+jobs:
+  update-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Get PR details
+        id: pr_details
+        run: |
+          echo "## Setting PR Target Branch and Title"
+
+          # Get source and destination branches
+          PR_SOURCE_BRANCH="${{ github.event.pull_request.head.ref }}"
+          PR_DEST_BRANCH="${{ github.event.pull_request.base.ref }}"
+
+          # Determine the new target branch
+          if [ "$PR_DEST_BRANCH" = "dev" ]; then
+            NEW_TARGET_BRANCH="main"
+          else
+            NEW_TARGET_BRANCH="dev"
+          fi
+
+          echo "PR_SOURCE_BRANCH=${PR_SOURCE_BRANCH}" >> $GITHUB_ENV
+          echo "NEW_TARGET_BRANCH=${NEW_TARGET_BRANCH}" >> $GITHUB_ENV
+
+          # Generate PR title
+          PR_TITLE="Merge $NEW_TARGET_BRANCH into $PR_SOURCE_BRANCH"
+          echo "PR_TITLE=${PR_TITLE}" >> $GITHUB_ENV
+
+      - name: Generate PR description
+        id: pr_description
+        run: |
+          echo "## Generating Description"
+
+          # Find commit messages that are part of the merge
+          # that are not yet in the target branch
+          git fetch origin "$NEW_TARGET_BRANCH"
+          COMMIT_MESSAGES=$(git log --pretty=format:"- %s" origin/$NEW_TARGET_BRANCH..origin/$PR_SOURCE_BRANCH)
+
+          echo "PR_DESCRIPTION=$COMMIT_MESSAGES" >> $GITHUB_ENV
+
+      - name: Update PR
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} \
+            --title "${{ env.PR_TITLE }}" \
+            --body "${{ env.PR_DESCRIPTION }}"
