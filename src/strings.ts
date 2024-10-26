@@ -11,7 +11,8 @@ export const homeBio = {
   heading: "Welcome",
   welcomeMessage:
     "I’m so glad you’re here! I’m Kimberly Dunham, and I write YA dark forest fantasy stories featuring elemental magic, sentient forests, and sandwiches. I also enjoy a good pun (or a bad one). If you enjoy stories that mingle darkness with humor, beauty, and hope, you’ll enjoy my books.",
-  moreLinkLabel: "learn more...",
+  aboutLinkLabel: "Read more...",
+  booksLinkLabel: "Check out my books...",
 };
 
 export const about = {

@@ -31,16 +31,21 @@
   font-style: normal;
 }
 
-.more-link-btn {
-  width: 100%;
+.link-btn {
+  width: max-content;
+  align-self: flex-end;
   text-align: right;
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-style: italic;
-  color: var(--text-color)
+  color: var(--text-color);
 }
 
-.more-link-btn:hover {
+.link-btn:first-of-type {
+  padding-top: 5px;
+}
+
+.link-btn:hover {
   color: var(--secondary-color)
 }
 
