@@ -48,4 +48,11 @@
   .attribution-list {
     text-align: center;
   }
+
+  .attribution-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30px;
+  }
 }

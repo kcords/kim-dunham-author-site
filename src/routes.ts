@@ -1,17 +1,17 @@
 import { RouteItem } from "./models";
 import { navigation } from "./strings";
 
-const home: RouteItem = {
+export const home: RouteItem = {
   label: navigation.home,
   path: "/",
 };
 
-const books: RouteItem = {
+export const books: RouteItem = {
   label: navigation.books,
   path: "/books",
 };
 
-const newsletter: RouteItem = {
+export const newsletter: RouteItem = {
   label: navigation.newsletter,
   path: "/newsletter",
 };
@@ -21,7 +21,7 @@ export const about: RouteItem = {
   path: "/about",
 };
 
-const contact: RouteItem = {
+export const contact: RouteItem = {
   label: navigation.contact,
   path: "/contact",
 };

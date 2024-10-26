@@ -3,12 +3,12 @@
     {
       "title": "Betwixt",
       "detail": "",
-      "release": "Coming 2026",
+      "release": "2026-12-31T00:00:00.000Z",
       "publisher": "Published by Quill & Flame Publishing House",
       "logline": "Devastated by the sudden death of her mother, a socially anxious teen returns to her birthplace of Ketchikan, Alaska, where she must uncover the truth about her newfound magical abilities tied to the forest and her mother's veiled past before the powers governing the forest destroy her.",
       "image": {
         "path": "/assets/images/betwixt_placeholder.png",
-        "description": ""
+        "description": "Betwixt book image by Kimberly Dunham"
       }
     }
   ],
@@ -16,9 +16,13 @@
     {
       "title": "Blackthorn and Holly",
       "detail": "Featured in the Seasons of Romantasy anthology",
-      "release": "Coming June 2025",
+      "release": "2025-06-31T00:00:00.000Z",
       "publisher": "Published by Quill & Flame Publishing House",
-      "logline": ""
+      "logline": "Abandoned by her people and her magic, a determined farm girl struggles to prepare her farm for winter, care for her beloved chickens, and protect her ancestral land from magic-hunting invaders with the aid of a mysterious traveler before she loses her home.",
+      "image": {
+        "path": "/assets/images/seasons_of_romantacy_placeholder.png",
+        "description": "Seasons of Romantasy book image featuring Blackthorn and Holly by Kimberly Dunham"
+      }
     }
   ]
 }
