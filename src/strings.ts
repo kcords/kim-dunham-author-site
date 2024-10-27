@@ -18,7 +18,7 @@ export const homeBio = {
 export const about = {
   aboutHeading: "About Kimberly",
   aboutText:
-    "Kimberly is a YA dark forest fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter and has turned into a coffee snob because of it. Today, she balances writing with homeschooling her daughter and working on an English language and literature degree. She has a deep affinity for popcorn, thrift stores, and all things Middle Earth. When she has a little downtime, which is never, she enjoys forest hikes, fawning over her houseplants, trying to decorate cakes, archery, camping, and playing guitar.",
+    "Kimberly is a YA dark forest fantasy author and an Aurora Contest finalist. She lives in the rainy Pacific Northwest with her husband and daughter and has turned into a coffee snob because of it. Today, she balances writing with homeschooling her daughter and working on an English degree. She has a deep affinity for popcorn, thrift stores, and all things Middle Earth. When she has a little downtime, which is never, she enjoys forest hikes, fawning over her houseplants, trying to decorate cakes, archery, camping, and playing guitar.",
   aboutImgAlt: "Kimberly standing in front of an overlook of the Pacific Ocean",
   forestsHeading: "Why Forests?",
   forestsText:
