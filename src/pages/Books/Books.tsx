@@ -10,7 +10,7 @@ const shortStoriesTyped = shortStories as PublicationDetails[];
 
 export const Books = () => {
   return (
-    <PageWrapper>
+    <PageWrapper noPaddingBottomSmallScreen>
       <h2 className={classes.heading}>Books</h2>
       {booksTyped.map((book) => (
         <PublicationContent publication={book} />

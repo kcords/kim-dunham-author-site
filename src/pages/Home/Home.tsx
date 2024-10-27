@@ -9,7 +9,7 @@ import { Socials } from "../../components/Socials";
 
 export const Home = () => {
   return (
-    <PageWrapper>
+    <PageWrapper noGapSmallScreen>
       <HomeBio />
       <Awards />
       <Quote />

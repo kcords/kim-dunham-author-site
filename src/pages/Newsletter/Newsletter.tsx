@@ -4,7 +4,7 @@ import { PageWrapper } from "../../components/PageWrapper";
 
 export const Newsletter = () => {
   return (
-    <PageWrapper>
+    <PageWrapper noGapSmallScreen noPaddingBottomSmallScreen>
       <NewsletterSignup />
       <NewsletterFeed />
     </PageWrapper>
