@@ -1,11 +1,12 @@
-import { DAY_IN_MILLISECONDS } from "./consts";
-import { ISODateString } from "./types";
+import { ISODateString, MaybeFalse } from "./types";
 
-export const compileClassList = (...args: string[]): string =>
+import { DAY_IN_MILLISECONDS } from "./consts";
+
+export const compileClassList = (...args: MaybeFalse<string>[]): string =>
   args
+    .filter((className): className is string => typeof className === "string")
     .reduce(
-      (classList, className) =>
-        typeof className === "string" ? `${classList} ${className}` : classList,
+      (compiledClasses, nextClass) => `${compiledClasses} ${nextClass}`,
       ""
     )
     .trim();
