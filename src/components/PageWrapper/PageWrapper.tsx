@@ -2,16 +2,25 @@ import classes from "./PageWrapper.module.css";
 import { compileClassList } from "../../utils";
 
 interface PageWrapperProps {
-  noSmallScreenSectionGaps?: boolean;
+  noPaddingTopSmallScreen?: boolean;
+  noPaddingBottomSmallScreen?: boolean;
+  noGapSmallScreen?: boolean;
   children: React.ReactNode;
 }
 
-export const PageWrapper = ({ noSmallScreenSectionGaps, children }: PageWrapperProps) => {
+export const PageWrapper = ({
+  noPaddingTopSmallScreen,
+  noPaddingBottomSmallScreen,
+  noGapSmallScreen,
+  children,
+}: PageWrapperProps) => {
   return (
     <main
       className={compileClassList(
         classes.contentBody,
-        noSmallScreenSectionGaps ? classes.noSectionSpacing : ""
+        noGapSmallScreen && classes.noSectionSpacing,
+        noPaddingTopSmallScreen && classes.noPaddingTop,
+        noPaddingBottomSmallScreen && classes.noPaddingBottom
       )}
     >
       {children}

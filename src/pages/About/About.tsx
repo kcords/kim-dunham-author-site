@@ -8,7 +8,7 @@ import kodaWriting from "../../assets/images/k_koda_square.jpg";
 
 export const About = () => {
   return (
-    <PageWrapper noSmallScreenSectionGaps>
+    <PageWrapper noGapSmallScreen noPaddingBottomSmallScreen>
       <AboutContent heading={about.aboutHeading} text={about.aboutText}>
         <Photo
           src={kDunhamCoast}

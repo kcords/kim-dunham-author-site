@@ -63,6 +63,7 @@
     box-sizing: border-box;
     align-items: center;
     margin: 0;
+    padding: 40px;
     width: 100%;
     overflow-x: hidden;
     border-radius: 0;
