@@ -4,7 +4,7 @@ import { SectionWrapper } from "../../components/SectionWrapper";
 import { SocialIconSize } from "../../consts";
 import { Socials } from "../../components/Socials";
 import classes from './Contact.module.css'
-import { contactForm } from "../../strings";
+import { contactForm } from "@/data/strings.json";
 
 export const Contact = () => {
   return (

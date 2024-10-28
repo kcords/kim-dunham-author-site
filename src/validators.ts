@@ -1,7 +1,7 @@
 import { FieldState, FieldValidator } from "final-form";
 
 import isEmail from "validator/lib/isEmail";
-import { validationError } from "./strings";
+import { validationError } from "./data/strings.json";
 
 export const validateEmail = (value: unknown): string | undefined =>
   isEmail((value as string) || "") ? undefined : validationError.email;

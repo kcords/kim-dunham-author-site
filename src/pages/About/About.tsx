@@ -1,7 +1,7 @@
 import { AboutContent } from "../../components/Sections/AboutContent";
 import { PageWrapper } from "../../components/PageWrapper";
 import { Photo } from "../../components/Photo";
-import { about } from "../../strings";
+import { about } from "@/data/strings.json";
 import forestStump from "../../assets/images/forest_stump_square.jpg";
 import kDunhamCoast from "../../assets/images/kdunham_oregon_coast_square.jpg";
 import kodaWriting from "../../assets/images/k_koda_square.jpg";

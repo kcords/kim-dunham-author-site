@@ -2,7 +2,7 @@ import {LoadingSpinner} from '../../LoadingSpinner/'
 import { NewsletterFeedItem } from "./NewsletterFeedItem";
 import { SectionWrapper } from "../../SectionWrapper";
 import classes from "./NewsletterFeed.module.css";
-import { newsletter } from "../../../strings";
+import { newsletter } from "@/data/strings.json";
 import { toast } from "react-toastify";
 import { useGetFeedItems } from "../../../hooks/useGetFeedItems";
 
