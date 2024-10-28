@@ -8,3 +8,8 @@
   text-align: justify;
 }
 
+@media only screen and (max-width: 600px) {
+  .socials-subheading {
+    text-align: center;
+  }
+}
