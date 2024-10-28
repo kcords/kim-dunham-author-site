@@ -1,5 +1,6 @@
 import KDunhamLogo from "../../../assets/images/kdunham-logo.svg";
 import classes from "./Branding.module.css";
+import { header } from "@/data/strings.json";
 
 export const Branding = () => {
   return (
@@ -10,8 +11,8 @@ export const Branding = () => {
         aria-label="Open book with feather quill logo"
       />
       <div className={classes.brandingTextContainer}>
-        <h1 className={classes.brandingTitle}>Kimberly Dunham</h1>
-        <p className={classes.brandingSubtext}>YA dark forest fantasy author</p>
+        <h1 className={classes.brandingTitle}>{header.title}</h1>
+        <p className={classes.brandingSubtext}>{header.subtext}</p>
       </div>
     </div>
   );

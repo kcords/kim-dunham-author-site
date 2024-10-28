@@ -34,6 +34,7 @@ enum MaxWidth {
 
 enum Gap {
   None = "none",
+  Small = "gapSmall",
   Large = "gapLarge",
 }
 

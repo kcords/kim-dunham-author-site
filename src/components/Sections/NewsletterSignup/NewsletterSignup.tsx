@@ -6,7 +6,7 @@ import { SectionWrapper } from "../../SectionWrapper/index.ts";
 import { addNewSubscriber } from "../../../api.ts";
 import classes from "./NewsletterSignup.module.css";
 import isEmail from "validator/lib/isEmail";
-import { newsletter } from "../../../strings";
+import { newsletter } from "@/data/strings.json";
 import { toast } from "react-toastify";
 
 export const NewsletterSignup = () => {

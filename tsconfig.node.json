@@ -1,5 +1,11 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // Make sure baseUrl is set
+    "paths": {
+      "@/*": ["./src/*"] // Maps the @/ alias to the src directory
+    },
+    "resolveJsonModule": true,
+
     "target": "ES2022",
     "lib": ["ES2023"],
     "module": "ESNext",
@@ -16,7 +22,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": false
   },
   "include": ["vite.config.ts"]
 }

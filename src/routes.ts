@@ -1,5 +1,5 @@
 import { RouteItem } from "./models";
-import { navigation } from "./strings";
+import { navigation } from "./data/strings.json";
 
 export const home: RouteItem = {
   label: navigation.home,

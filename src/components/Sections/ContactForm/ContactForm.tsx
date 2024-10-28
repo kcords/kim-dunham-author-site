@@ -13,7 +13,7 @@ import { SectionWrapper } from "../../SectionWrapper/SectionWrapper.tsx";
 import cLaptop from "../../../assets/images/c_laptop_square.jpg";
 import classes from "./ContactForm.module.css";
 import { compileClassList } from "../../../utils.ts";
-import { contactForm } from "../../../strings.ts";
+import { contactForm } from "@/data/strings.json";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 

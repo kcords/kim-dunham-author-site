@@ -5,7 +5,7 @@ import {
 } from "../../externalUrls";
 
 import classes from "./Footer.module.css";
-import { footer } from "../../strings";
+import { footer } from "@/data/strings.json";
 
 export const Footer = () => {
   return (
