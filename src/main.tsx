@@ -6,6 +6,7 @@ import { Slide, ToastContainer } from "react-toastify";
 
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop.tsx";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
@@ -15,6 +16,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
+        <ScrollToTop />
         <App />
       </BrowserRouter>
     </QueryClientProvider>

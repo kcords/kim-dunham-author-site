@@ -13,11 +13,11 @@ export const Books = () => {
     <PageWrapper noPaddingBottomSmallScreen>
       <h2 className={classes.heading}>Books</h2>
       {booksTyped.map((book) => (
-        <PublicationContent publication={book} />
+        <PublicationContent publication={book} key={book.title} />
       ))}
       <h2 className={classes.heading}>Short Stories</h2>
       {shortStoriesTyped.map((shortStory) => (
-        <PublicationContent publication={shortStory} />
+        <PublicationContent publication={shortStory} key={shortStory.title} />
       ))}
     </PageWrapper>
   );

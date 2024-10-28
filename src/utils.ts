@@ -1,6 +1,10 @@
 import { ISODateString, MaybeFalse } from "./types";
 
-import { DAY_IN_MILLISECONDS } from "./consts";
+import { differenceInCalendarDays } from "date-fns/differenceInCalendarDays";
+import { differenceInMonths } from "date-fns/differenceInMonths";
+import { differenceInYears } from "date-fns/differenceInYears";
+import { format } from "date-fns/format";
+import { parseISO } from "date-fns/parseISO";
 
 export const compileClassList = (...args: MaybeFalse<string>[]): string =>
   args
@@ -19,25 +23,22 @@ export const formatDateStr = (dateStr: ISODateString): string =>
     day: "numeric",
   });
 
-export const getDiffFromIsoDate = (dateStr: ISODateString) => {
+export const getDiffFromIsoDate = (dateStr: string) => {
   const today = new Date();
-  const comparisonDate = new Date(dateStr);
+  const comparisonDate = parseISO(dateStr);
 
-  const diffInYears = today.getFullYear() - comparisonDate.getFullYear();
-  const diffInMonths = today.getMonth() - comparisonDate.getMonth();
-  const diffInTime = today.getTime() - comparisonDate.getTime();
-  const months = diffInYears * 12 + diffInMonths;
-  const days = Math.floor(diffInTime / (1 * DAY_IN_MILLISECONDS));
+  const diffInDays = differenceInCalendarDays(today, comparisonDate);
+  const diffInMonths = differenceInMonths(today, comparisonDate);
+  const diffInYears = differenceInYears(today, comparisonDate);
 
-  return { days, months, years: diffInYears };
+  return { days: diffInDays, months: diffInMonths, years: diffInYears };
 };
 
-export const getReleaseTextByDate = (releaseDateStr: ISODateString) => {
-  const releaseDate = new Date(releaseDateStr);
-  const releaseMonth = releaseDate.toLocaleString("default", { month: "long" });
-  const releaseYear = releaseDate.getFullYear().toString();
+export const getReleaseTextByDate = (releaseDate: string) => {
+  const releaseMonth = format(releaseDate, "LLLL");
+  const releaseYear = format(releaseDate, "y");
 
-  const { days, months, years } = getDiffFromIsoDate(releaseDateStr);
+  const { days, months, years } = getDiffFromIsoDate(releaseDate);
 
   if (months <= -6) return `Coming ${releaseYear}`;
   if (months <= -3) return `Coming ${releaseMonth} ${releaseYear}`;
@@ -47,5 +48,6 @@ export const getReleaseTextByDate = (releaseDateStr: ISODateString) => {
     return `Coming in ${daysFromRelease} ${dayVariant}`;
   }
   if (years < 1) return "Available now";
+
   return `Published ${releaseMonth} ${releaseYear}`;
 };
