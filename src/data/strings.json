@@ -31,7 +31,7 @@
   "newsletter": {
     "heading": "Newsletter signup",
     "subheading": "Follow along with my author journey! Subscribe to my monthly newsletter for writing updates, publication news, and forest plant lore.",
-    "leadMagnet": "As a thank you, you'll receive a free copy of my short story, Song of the Wolf, once it becomes available.",
+    "leadMagnet": "",
     "emailLabel": "Email",
     "signupBtnLabel": "Sign up",
     "signupSuccess": "Thanks for signing up! Check your inbox for a confirmation email.",
