@@ -4,8 +4,22 @@ import { useUpdateMenuRefOnNav } from "@/hooks/useUpdateMenuRefOnNav";
 
 export const MenuIcon = () => {
   //used to uncheck checkbox state on navigation
-  const menuCheckboxRef = useRef(null);
+  const menuCheckboxRef = useRef<HTMLInputElement>(null);
   useUpdateMenuRefOnNav(menuCheckboxRef);
+
+  const toggleMenuCheckbox = () => {
+    if (!menuCheckboxRef.current) return;
+    menuCheckboxRef.current.checked = !menuCheckboxRef.current.checked;
+  };
+
+  const handleKeypress: React.KeyboardEventHandler = ({ key }) => {
+    if (key !== "enter" && key !== " ") return;
+    toggleMenuCheckbox();
+  };
+
+  const handleClick: React.MouseEventHandler = () => toggleMenuCheckbox();
+
+  const renderLine = () => <div className={classes.line} />;
 
   return (
     <>
@@ -14,13 +28,20 @@ export const MenuIcon = () => {
         id="menu-toggle"
         className={classes.menuToggle}
         ref={menuCheckboxRef}
-        aria-label="Toggle menu"
       />
-      <label
-        htmlFor="menu-toggle"
+      <div
         className={classes.menuIcon}
         tabIndex={0}
-      ></label>
+        aria-label={"Toggle menu drawer"}
+        aria-controls="menu-toggle"
+        role="button"
+        onKeyDown={handleKeypress}
+        onClick={handleClick}
+      >
+        {renderLine()}
+        {renderLine()}
+        {renderLine()}
+      </div>
     </>
   );
 };
