@@ -100,8 +100,6 @@
 
   .menu-toggle:checked~.menu-icon {
     position: fixed;
-    top: 15px;
-    right: 5px;
   }
 
   .menu-icon .line {
